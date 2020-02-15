@@ -33,7 +33,14 @@ int main() {
 	doSomethingWithA(A(10));
 
 	// O compilador implicitamente utiliza o construtor da classe A
+	// primeiro o 10 é passado para o construtor de A e o novo objeto A é usado no método abaixo
 	doSomethingWithA(10);
+
+
+	/*
+	*	Raramente o programador quer que essas conversões implícitas aconteçam.
+	*	Desse modo, é uma boa prática adicionar o especificador nos construtores de classe
+	*/
 
 
 	return 0;
