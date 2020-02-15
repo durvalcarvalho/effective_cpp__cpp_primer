@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// cout << complex << endl;
+//  ^^ os object
 ostream& operator<<(ostream& os, const Complex& c)
 {
 	os << c.real();
@@ -34,7 +36,11 @@ void Complex::set_imag(double imag) {
 	_imag = imag;
 }
 
-Complex Complex::operator+(const Complex& c) {
+// Complex a = b + c;
+//         	   ^ this object
+//                 ^ parameter object
+// this operator should not modify any of the objects
+Complex Complex::operator+(const Complex& c) const {
 	return Complex(_real + c.real(), _imag + c.imag());
 }
 

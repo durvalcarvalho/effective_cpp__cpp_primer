@@ -9,6 +9,7 @@ class Complex
 
 public:
 	Complex(double real=0.0, double imag=0.0);
+	//					 ^ default parameters values should be only on header files
 
 	double real() const;
 	double imag() const;
